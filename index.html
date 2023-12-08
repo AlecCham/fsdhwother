@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex-grow: 1;
+            color: chocolate;
+        }
+        nav.navbar {
+            background-color: #f8c291;
+        }
+        footer {
+            background-color: #f9e79f;
+            width: 100%;
+        }
+        /* Custom CSS for the submit button */
+        button.btn-submit {
+            background-color: #f8c291; /* Match navbar color */
+            border: none; /* Remove default border */
+            color: white; /* White text color */
+        }
+        button.btn-submit:hover {
+            background-color: darken(#f8c291, 10%); /* Slightly darker on hover */
+            color: white;
+        }
+    </style>
+</head>
+<body class="pt-5">
+    <main class="flex-grow-1">
+        <div class="container mt-5 pt-5">
+                                <!-- Projects Section -->
+        <section class="mb-4">
+            <h2 class="text-center mb-3 text-success">Projects</h2>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-info">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Project 1 - Mini Website</h5>
+                            <p class="card-text">Little Village - social place</p>
+                            <a href="https://aleccham.github.io/Little-Village/" class="btn btn-info mt-auto">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- More projects... -->
+            </div>
+        </section>
+        <!-- Homework Section -->
+        <section class="mb-4">
+            <h2 class="text-center mb-3 text-success">Homework Assignments</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="path/to/homework1.html" class="stretched-link">Homework 7</a>
+                </li>
+                <!-- More homework assignments... -->
+            </ul>
+        </section>
+        </div>
+    </main>
+    <footer class="text-center py-3">
+        &copy; 2023 Freeper
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
