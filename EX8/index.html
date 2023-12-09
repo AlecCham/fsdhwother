@@ -27,6 +27,7 @@
             </div>
 
             <button type="button" class="btn btn-primary" onclick="addNumbers()">Submit</button>
+            <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear</button>
         </form>
     </div>
 
@@ -43,6 +44,11 @@
             } else {
                 alert('Please enter valid numbers.');
             }
+        }
+        function clearForm() {
+            document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+            document.getElementById('result').value = '';
         }
     </script>
 </body>
