@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPA Calculator</title>
+    <!-- Add CSS for styling (optional) -->
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Subject Marks</h1>
+    </div>
+    <!-- Grid for entering marks -->
+    <div id="marksInput">
+        <table>
+            <tr><td>Subject 1:</td><td><input type="number" id="subject1"></td></tr>
+            <tr><td>Subject 2:</td><td><input type="number" id="subject2"></td></tr>
+            <tr><td>Subject 3:</td><td><input type="number" id="subject3"></td></tr>
+            <tr><td>Subject 4:</td><td><input type="number" id="subject4"></td></tr>
+            <tr><td colspan="2"><button onclick="calculateGPA()">Submit</button></td></tr>
+        </table>
+    </div>
+
+    <!-- Table for displaying results -->
+    <div id="results" style="display:none;">
+        <table>
+            <tr><th>Subject</th><th>Marks</th></tr>
+            <!-- Rows for results will be added here -->
+            <tr><td colspan="2" id="gpaResult"></td></tr>
+        </table>
+    </div>
+
+    <script>
+        function calculateGPA() {
+            var marks = [
+                document.getElementById('subject1').value,
+                document.getElementById('subject2').value,
+                document.getElementById('subject3').value,
+                document.getElementById('subject4').value
+            ];
+
+            var totalGPA = 0;
+            var resultsTable = document.getElementById('results').getElementsByTagName('table')[0];
+
+            marks.forEach((mark, index) => {
+                var gpa = convertToGPAScale(mark);
+                totalGPA += gpa;
+                var row = resultsTable.insertRow(index + 1);
+                row.insertCell(0).innerText = 'Subject' + (index + 1);
+                row.insertCell(1).innerText = gpa.toFixed(2);
+            });
+
+            var averageGPA = totalGPA / marks.length;
+            document.getElementById('gpaResult').innerText = 'Overall GPA: ' + averageGPA.toFixed(2);
+
+            // Hide the input grid and show the results
+            document.getElementById('marksInput').style.display = 'none';
+            document.getElementById('results').style.display = 'block';
+        }
+        function convertToGPAScale(mark) {
+            mark = parseFloat(mark);
+            if (mark >= 90) {
+                return 4.0; // A
+            } else if (mark >= 80) {
+                return 3.0; // B
+            } else if (mark >= 70) {
+                return 2.0; // C
+            } else if (mark >= 60) {
+                return 1.0; // D
+            } else {
+                return 0.0; // F
+            }
+        }
+</script>
+</body>
+</html>
