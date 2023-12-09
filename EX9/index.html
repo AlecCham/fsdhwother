@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>GPA Calculator</title>
-    <!-- Add CSS for styling (optional) -->
 </head>
 <body>
     <div class="container text-center">
         <h1>Subject Marks</h1>
     </div>
-    <!-- Grid for entering marks -->
+    <!-- Table grid for entering marks -->
     <div id="marksInput">
         <table>
             <tr><td>Subject 1:</td><td><input type="number" id="subject1"></td></tr>
@@ -20,11 +19,11 @@
         </table>
     </div>
 
-    <!-- Table for displaying results -->
+    <!-- Table for results -->
     <div id="results" style="display:none;">
         <table>
             <tr><th>Subject</th><th>Marks</th></tr>
-            <!-- Rows for results will be added here -->
+            <!-- Row for results -->
             <tr><td colspan="2" id="gpaResult"></td></tr>
         </table>
     </div>
@@ -38,38 +37,23 @@
                 document.getElementById('subject4').value
             ];
 
-            var totalGPA = 0;
+            var totalMarks = 0;
             var resultsTable = document.getElementById('results').getElementsByTagName('table')[0];
 
             marks.forEach((mark, index) => {
-                var gpa = convertToGPAScale(mark);
-                totalGPA += gpa;
+                totalMarks += parseFloat(mark);
                 var row = resultsTable.insertRow(index + 1);
-                row.insertCell(0).innerText = 'Subject' + (index + 1);
-                row.insertCell(1).innerText = gpa.toFixed(2);
+                row.insertCell(0).innerText = 'Subject ' + (index + 1);
+                row.insertCell(1).innerText = mark;
             });
 
-            var averageGPA = totalGPA / marks.length;
-            document.getElementById('gpaResult').innerText = 'Overall GPA: ' + averageGPA.toFixed(2);
+            var gpa = totalMarks / marks.length;
+            document.getElementById('gpaResult').innerText = 'Overall GPA: ' + gpa.toFixed(2);
 
-            // Hide the input grid and show the results
+            // Hiding passed grades and showing GPA
             document.getElementById('marksInput').style.display = 'none';
             document.getElementById('results').style.display = 'block';
-        }
-        function convertToGPAScale(mark) {
-            mark = parseFloat(mark);
-            if (mark >= 90) {
-                return 4.0; // A
-            } else if (mark >= 80) {
-                return 3.0; // B
-            } else if (mark >= 70) {
-                return 2.0; // C
-            } else if (mark >= 60) {
-                return 1.0; // D
-            } else {
-                return 0.0; // F
-            }
-        }
+    }
 </script>
 </body>
 </html>
