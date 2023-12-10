@@ -6,7 +6,7 @@ function helloOne() {
 
 helloOne();
 
-//Anoymus function
+//anonymous function
 var helloTwo = function() {
     console.log("Hello two")
 
