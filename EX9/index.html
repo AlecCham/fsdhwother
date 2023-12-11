@@ -6,10 +6,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container text-centerm mt-4">
-        <h1>Subject Marks</h1>
+    <div class="container text-center mt-4">
+        <h1>GPA Calculator</h1>
+        <div class="btn-group mt-3" role="group">
+            <button type="button" class="btn btn-primary">Simple Avarage</button>
+            <button type="button" class="btn btn-secondary" disabled>United States</button>
+            <button type="button" class="btn btn-secondary" disabled>United Kingdom</button>
+            <button type="button" class="btn btn-secondary" disabled>European ECTS</button>
+            <button type="button" class="btn btn-secondary" disabled>Indian System</button>
+            <button type="button" class="btn btn-secondary" disabled>Canada</button>
+            <button type="button" class="btn btn-secondary" disabled>Australia</button>
+            <button type="button" class="btn btn-secondary" disabled>Asian Countries</button>
+            <button type="button" class="btn btn-secondary" disabled>France</button>
+            <button type="button" class="btn btn-secondary" disabled>Germany</button>
+        </div>
+        <!-- Possible accordion should be added for grading system explanation -->
     </div>
-    <!-- Table grid for entering marks -->
+    <!-- Table grid for entering marks. Need to add funtionality to make it dynamic.
+    User should be able to add/remove subjusts and culculate GPA within single page -->
     <div id="marksInput" class="mt-3">
         <table>
             <tr>
