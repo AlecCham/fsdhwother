@@ -1,0 +1,34 @@
+    <!--Steps
+    1. Input feild/form for takaing the information/zipcode from user and button to submit
+    2. onclick event handler on the button, we call a JS function
+    3. Ub the async js function, we make a fetch call using await keyword
+    4. Once we get the info, sent it to a funtion to displayData
+    5. Try to catch in the displayData function
+    6. Print the temperature.
+    7. 
+    conversion: (C × 9/5) + 32
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1>Weather Info by zipcode</h1>
+                    <form id="zipcodeForm" class="input-group mb-3">
+                        <input type="text" id="zipcode" class="form-control" placeholder="Enter zipcode">
+                    </form>
+                    <button class="btn btn-primary" type="button" onclick="getWeatherData()">Get Weather</button>
+                    <div id="w" class="alert alert-info mt-3"></div>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
