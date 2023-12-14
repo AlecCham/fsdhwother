@@ -22,7 +22,7 @@
                 <div class="col-md-6">
                     <h1>Weather Info by zipcode</h1>
                         <form id="zipcodeForm" class="input-group mb-3">
-                            <input type="text" id="zipcode" class="form-control" placeholder="Enter zipcode">
+                            <input type="text" id="zipcode" class="form-control" placeholder="Enter zipcode" onkeyup="validateInput()">
                         </form>
                         <button class="btn btn-primary" type="button" onclick="getWeatherData()">Get Weather</button>
                         <div id="w" class="alert alert-info mt-3"></div>

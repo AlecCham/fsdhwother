@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Village - More Than a Market, It's a Social Journey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex-grow: 1;
+            color: chocolate;
+        }
+        nav.navbar {
+            background-color: #f8c291;
+        }
+        footer {
+            background-color: #f9e79f;
+            width: 100%;
+        }
+        /* Custom CSS for the submit button */
+        button.btn-submit {
+            background-color: #f8c291; /* Match navbar color */
+            border: none; /* Remove default border */
+            color: white; /* White text color */
+        }
+        button.btn-submit:hover {
+            background-color: darken(#f8c291, 10%); /* Slightly darker on hover */
+            color: white;
+        }
+    </style>
+</head>
+<body class="pt-5">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Little Village</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gastronomic Gems</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="loginmodal.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow-1">
+        <div class="container mt-5 pt-5">
+            <!-- Section: Design Block -->
+            <section class="background-radial-gradient">
+                <div class="container py-5 px-md-5 text-center text-lg-start">
+                    <div class="row gx-lg-5 align-items-center">
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold ls-tight" style="color: #6c5b7b;">
+                                Join Little Village <br />
+                                <span style="color: #333;">Explore Your Opportunities</span>
+                            </h1>
+                            <p style="color: #333;">
+                                Be part of a vibrant community at Little Village. Fill out the form to start your journey with us.
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card bg-white">
+                                <div class="card-body px-4 py-5 px-md-5">
+                                    <!-- Form -->
+                                    <form>
+                                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                                        <div class="row">
+                                          <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                              <input type="text" id="form3Example1" class="form-control" />
+                                              <label class="form-label" for="form3Example1">First name</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                              <input type="text" id="form3Example2" class="form-control" />
+                                              <label class="form-label" for="form3Example2">Last name</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                          
+                                        <!-- Email input -->
+                                        <div class="form-outline mb-4">
+                                          <input type="email" id="form3Example3" class="form-control" />
+                                          <label class="form-label" for="form3Example3">Email address</label>
+                                        </div>
+                          
+                                        <!-- Password input -->
+                                        <div class="form-outline mb-4">
+                                          <input type="password" id="form3Example4" class="form-control" />
+                                          <label class="form-label" for="form3Example4">Password</label>
+                                        </div>
+                          
+                                        <!-- Checkbox -->
+                                        <div class="form-check d-flex justify-content-center mb-4">
+                                          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                          <label class="form-check-label" for="form2Example33">
+                                            Subscribe to our newsletter
+                                          </label>
+                                        </div>
+                          
+                                        <!-- Submit button -->
+                                        <button type="submit" class="btn btn-primary btn-block mb-4">
+                                          Sign up
+                                        </button>
+                                        <!-- Register buttons -->
+                                        <div class="text-center">
+                                          <button type="button" class="btn btn-link btn-floating mx-1">
+                                            <i class="fab fa-facebook-f"></i>
+                                          </button>
+                          
+                                          <button type="button" class="btn btn-link btn-floating mx-1">
+                                            <i class="fab fa-google"></i>
+                                          </button>
+                          
+                                          <button type="button" class="btn btn-link btn-floating mx-1">
+                                            <i class="fab fa-twitter"></i>
+                                          </button>
+                          
+                                          <button type="button" class="btn btn-link btn-floating mx-1">
+                                            <i class="fab fa-github"></i>
+                                          </button>
+                                        </div>
+                                      </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="text-center py-3">
+        &copy; 2023 Little Village. All rights reserved.
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

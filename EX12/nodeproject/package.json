@@ -1,0 +1,20 @@
+{
+  "name": "nodeproject",
+  "version": "1.0.0",
+  "description": "My first node project",
+  "main": "index.html",
+  "scripts": {
+    "test": "test",
+    "start": "lite-server"
+  },
+  "keywords": [
+    "first",
+    "node",
+    "project"
+  ],
+  "author": "FreeperIO",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
