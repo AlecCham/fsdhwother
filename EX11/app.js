@@ -30,3 +30,16 @@ function displayData(data) {
     document.getElementById('w').textContent = data;
     console.log(data);
 }
+
+
+function validateInput() {
+    const input = document.getElementById('zipcode').value;
+    const button = document.querySelector('button');
+
+    const isValidZip = /^\d{5}$/.test(input); // 5-digit zip code
+
+    button.disabled = !(isValidZip);
+}
+
+// Initialize button state
+validateInput();
