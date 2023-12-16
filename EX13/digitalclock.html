@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create elements using React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- To show time in two divs
+    first div - using inner HTML
+    second div - using React
+    -->
+    <h1>Regular - Date-Time</h1>
+    <div>
+        <input />
+        <div id="regularDiv">Regular div, this should show time</div>
+        <br><br>
+        <hr>
+    </div>
+
+    <h1>React - Date-Time</h1>
+    <div id="reactDiv">React div, this should show time</div>
+    
+    <script type="text/babel">
+        let regularDiv = document.getElementById("regularDiv");
+        let root = ReactDOM.createRoot(document.getElementById("reactDiv"));
+
+        let renderTime = () => {
+            // Regular div using inner HTML
+            regularDiv.innerHTML = `<div><div><p>${new Date()}</p></div></div>`;
+
+            // React div
+            let dateComp = (
+                <div>
+                    <input />
+                    <p>{new Date().toString()}</p>
+                </div>
+            );
+            root.render(dateComp);
+        };
+        setInterval(renderTime, 1000);
+    </script>
+</body>
+</html>
