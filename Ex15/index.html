@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App for printing grades and name</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const myroot = ReactDOM.createRoot(document.getElementById('root'));
+        const FunComp = () => {
+            const [counter, setCounter] = React.useState(27);
+
+            const clickHandler = () => {
+                setCounter(counter + 1);
+                console.log(counter);
+            };
+            return (
+                <div> 
+                    <h1>Counter check: {counter}</h1>
+                    <button onClick={clickHandler}> Increment </button>  
+                </div>
+            )
+        }
+        myroot.render(<FunComp />);
+    </script>
+</body>
+</html>
