@@ -3,7 +3,7 @@ const MyNavbar = () => {
     <div>
       <div className="container">
       <div>
-            <br></br><br></br><br></br><br></br><br></br>
+          <br></br><br></br><br></br><br></br><br></br>
       </div>
       </div>
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{ backgroundColor: '#f8c291' }}>
