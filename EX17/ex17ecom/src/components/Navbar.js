@@ -1,11 +1,8 @@
-const MyNavbar = () => {
+import { Link } from 'react-router-dom';
+
+const Navbar = () => {
   return (
     <div>
-      <div className="container">
-      <div>
-          <br></br><br></br><br></br><br></br><br></br>
-      </div>
-      </div>
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{ backgroundColor: '#f8c291' }}>
       <div className="container">
         <a className="navbar-brand" href="#home" style={{ color: 'chocolate' }}>Little Village</a>
@@ -26,6 +23,9 @@ const MyNavbar = () => {
             <li className="nav-item">
               <a className="nav-link" href="#contact" style={{ color: 'chocolate' }}>Contact</a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#login" style={{ color: 'chocolate' }}>Login</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -34,4 +34,4 @@ const MyNavbar = () => {
   );
 }
 
-export default MyNavbar;
+export default Navbar;

@@ -1,0 +1,23 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-image: url('./27.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex-grow: 1;
+    color: chocolate;
+}
+nav.navbar {
+    background-color: #f8c291;
+}
+footer {
+    background-color: #f9e79f;
+    width: 100%;
+}
