@@ -1,6 +1,6 @@
 import React from 'react';
-import {Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar'; // Make sure the path is correct
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar'; // Ensure the path is correct
 import HomePage from './components/HomePage';
 import AboutUsPage from './components/AboutUsPage';
 import ContactUsPage from './components/ContactUsPage';
@@ -10,15 +10,17 @@ import Footer from './components/Footer';
 
 function App() {
     return ( 
-        <div>
+        <div className="d-flex flex-column min-vh-100">
             <Navbar />
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/aboutus" element={<AboutUsPage />} />
-                <Route path="/gallery" element={<GastronomicGemsPage />} />
-                <Route path="/contactus" element={<ContactUsPage />} />
-                <Route path="/login" element={<LoginPage />} />
-            </Routes>
+            <div className="container-fluid flex-grow-1">
+                <Routes>
+                    <Route path="/home" element={<HomePage />} />
+                    <Route path="/aboutus" element={<AboutUsPage />} />
+                    <Route path="/gallery" element={<GastronomicGemsPage />} />
+                    <Route path="/contactus" element={<ContactUsPage />} />
+                    <Route path="/login" element={<LoginPage />} />
+                </Routes>
+            </div>
             <Footer />
         </div>
     );
